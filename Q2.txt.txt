@@ -1,0 +1,6 @@
+let maxOfThree a b c =
+    a > b -> (a > c -> a | c) |
+    b > c -> b |
+    c
+in
+Print(maxOfThree 10 20 30) 

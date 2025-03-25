@@ -1,0 +1,3 @@
+let Palindrome n = n eq reverse (n, 0) -> 'Palindrome' | 'Not a Palindrome'
+    where rec reverse (n, x) = n gr 0 -> reverse (n/10, (x*10 + (n-(n/10)*10))) | x
+in Print(Palindrome (101))

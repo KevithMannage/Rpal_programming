@@ -1,0 +1,3 @@
+let odd_even n=(n-((n/2)*2)) eq 0-> 'Even' | 'ODD'
+in 
+print(odd_even(6))

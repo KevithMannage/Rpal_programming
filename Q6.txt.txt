@@ -1,0 +1,8 @@
+let rec reverse (n, x) = n gr 0 -> reverse (n/10, (x*10 + n - (n/10)*10)) | x
+	within
+		rec Palindrome(a, b) = 
+			b ls a -> '' |
+			reverse (a,0) eq a -> (print(a),print(' '),Palindrome(a+1,b))|
+			Palindrome(a+1,b)						
+in
+Palindrome(20,200)

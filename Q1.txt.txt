@@ -1,0 +1,6 @@
+let isPositive n =
+    n > 0 -> 'Positive' |
+    n eq 0 -> 'Zero' |
+    'Negative'
+in
+Print(isPositive (-5))

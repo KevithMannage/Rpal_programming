@@ -1,0 +1,7 @@
+let fiborange n m = get n m nil 1
+		where rec get n m l t = (m < x) -> l |
+						(x < n) -> (get n m l (t+1)) | 
+							(get n m ( l aug x) (t+1))
+			where x = fibo t
+			where rec fibo n = ( n eq 0 or n eq 1 ) -> 1 | (fibo (n-1) + fibo (n-2))
+in Print ( fiborange 1 90) 	

@@ -1,0 +1,67 @@
+1)
+let isPositive n =
+    n > 0 -> 'Positive' |
+    n eq 0 -> 'Zero' |
+    'Negative'
+in
+Print(isPositive (-5))
+
+2)
+let maxOfThree a b c =
+    a > b -> (a > c -> a | c) |
+    b > c -> b |
+    c
+in
+Print(maxOfThree 10 20 30) 
+
+3)
+
+let fiborange n m = get n m nil 1
+		where rec get n m l t = (m < x) -> l |
+						(x < n) -> (get n m l (t+1)) | 
+							(get n m ( l aug x) (t+1))
+			where x = fibo t
+			where rec fibo n = ( n eq 0 or n eq 1 ) -> 1 | (fibo (n-1) + fibo (n-2))
+in Print ( fiborange 0 90) 	
+
+
+4)
+let rec Factorial n = 
+     n eq  0 -> 1 
+    | n * Factorial(n - 1)
+in
+    Print(Factorial 5)
+
+
+5)
+let Palindrome n = n eq reverse (n, 0) -> 'Palindrome' | 'Not a Palindrome'
+    where rec reverse (n, x) = n gr 0 -> reverse (n/10, (x*10 + (n-(n/10)*10))) | x
+in Print(Palindrome (101))
+
+
+
+
+6)
+let rec reverse (n, x) = n gr 0 -> reverse (n/10, (x*10 + n - (n/10)*10)) | x
+	within
+		rec Palindrome(a, b) = 
+			b ls a -> '' |
+			reverse (a,0) eq a -> (print(a),print(' '),Palindrome(a+1,b))|
+			Palindrome(a+1,b)						
+in
+Palindrome(20,200)
+
+
+7)
+
+
+let odd_even n=(n-((n/2)*2)) eq 0-> 'Even' | 'ODD'
+in 
+print(odd_even(6))
+
+8)
+let rec Sum n = 
+    n eq 0 -> 0 
+    |n + Sum(n - 1)
+in
+    Print(Sum 5)
